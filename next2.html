@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        *{
+            padding: 0;
+            box-sizing: border-box;
+            margin: 0;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            display: grid;
+            place-items: center;
+            padding-top: 30px;
+        }
+        .container{
+            margin: 100px auto;
+        }
+        .container{
+            background-color: #e2e2e2;
+            padding: 70px 50px;
+            width: 90%;
+            border-radius: 10px;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            max-width: 400px;
+        }
+        .container h3{
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+        .container form input{
+            width: 100%;
+            outline: none;
+            margin:10px auto;
+            padding: 5px;
+        }
+        .container form input[type="submit"]{
+            background-color: black;
+            color: rgb(255, 255, 255);
+            cursor: pointer;
+            border: none;
+            padding: 10px 20px;
+            outline: none;
+        }
+        .list-items{
+            background-color: #ddd;
+            list-style: none;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .list-items li{
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid black;
+        }
+        .error{
+            background-color: rgb(200, 23, 23);
+            margin: 20px 0;
+            display: block;
+            padding: 10px 15px;
+            color: #fff;
+        }
+
+    pre {
+        overflow-x: auto; /* Enable horizontal scrolling if needed */
+        white-space: pre-wrap; /* Preserve formatting and wrap lines */
+        word-wrap: break-word; /* Break long words to prevent overflow */
+        font-size: 14px; /* Adjust font size for readability */
+        line-height: 1.4; /* Adjust line height for better spacing */
+        padding: 10px; /* Add padding for spacing */
+        border: 1px solid #ddd; /* Add border for clarity */
+        border-radius: 5px; /* Add border radius for aesthetics */
+        background-color: #f9f9f9; /* Add background color for contrast */
+        text-align: left; /* Center text within the <pre> element */
+    }
+
+
+        code {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>BASIC JS FORM</h1>
+    <div class="container">
+        <form action="">
+            <h3>Add User</h3>
+            <span class="msg">
+
+            </span>
+            <label>Name:</label><br>
+            <input type="text" name="name" id="name"><br>
+            <label>Email:</label><br>
+            <input type="email" name="email" id="email"><br>
+            <input type="submit" value="Submit" id="submit">
+        </form>
+    </div>
+    <ul class="list-items">
+        <p>User List</p>
+    </ul>
+
+    <button style="float: left;padding: 9px 20px;margin: 100px;"><a href="next.html">Previous</a></button>
+    <h2 style="margin: 200px 0 30px 0;">Source Code</h2>
+    <pre>
+        <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;title&gt;Document&lt;/title&gt;
+
+&lt;style&gt;
+*{
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    place-items: center;
+    padding-top: 30px;
+}
+.container{
+    margin: 100px auto;
+}
+.container{
+    background-color: #e2e2e2;
+    padding: 70px 50px;
+    width: 90%;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    max-width: 400px;
+}
+.container h3{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.container form input{
+    width: 100%;
+    outline: none;
+    margin:10px auto;
+    padding: 5px;
+}
+.container form input[type="submit"]{
+    background-color: black;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    border: none;
+    padding: 10px 20px;
+    outline: none;
+}
+.list-items{
+    background-color: #ddd;
+    list-style: none;
+    padding: 20px;
+    border-radius: 10px;
+}
+.list-items li{
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid black;
+}
+.error{
+    background-color: rgb(200, 23, 23);
+    margin: 20px 0;
+    display: block;
+    padding: 10px 15px;
+    color: #fff;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lth1&gtBASIC JS FORM&lt/h1&gt
+&ltdiv class="container"&gt
+&ltform action=""&gt
+&lth3&gtAdd User&lt/h3&gt
+&ltspan class="msg"&gt
+
+&lt/span&gt
+&ltlabel&gtName:&lt/label&gt&ltbr&gt
+&ltinput type="text" name="name" id="name"&gt&ltbr&gt
+&ltlabel&gtEmail:&lt/label&gt&ltbr&gt
+&ltinput type="email" name="email" id="email"&gt&ltbr&gt
+&ltinput type="submit" value="Submit" id="submit"&gt
+&lt/form&gt
+&lt/div&gt
+&ltul class="list-items"&gt
+&ltp&gtUser List&lt/p&gt
+&lt/ul&gt
+
+&ltscript&gt
+const msg = document.querySelector('.msg');
+const inputName = document.getElementById('name');
+const inputEmail= document.getElementById('email');
+const inputSubmit = document.getElementById('submit');
+const ul = document.querySelector('.list-items');
+const users = document.querySelectorAll('.users');
+inputSubmit.addEventListener('click', onSubmit);
+
+function onSubmit(e) {
+e.preventDefault();
+
+const username = inputName.value.trim();
+const email = inputEmail.value.trim();
+
+// Check if the username and email are not empty
+if (username === "" || email === "") {
+    const errorMessage = document.createElement('span');
+    errorMessage.classList.add('error');
+    errorMessage.textContent = "Please enter all fields";
+    msg.appendChild(errorMessage);
+
+    setTimeout(() => errorMessage.remove(), 3000);
+    return;
+}
+
+// Check if the username is unique
+const existingUsernames = Array.from(ul.querySelectorAll('li')).map(li => li.textContent.split(' : ')[0].trim());
+if (existingUsernames.includes(username)) {
+    const errorMessage = document.createElement('span');
+    errorMessage.classList.add('error');
+    errorMessage.textContent = "Username already exists";
+    msg.appendChild(errorMessage);
+
+    setTimeout(() => errorMessage.remove(), 3000);
+    return;
+}
+
+// Check if the email is unique
+const existingEmails = Array.from(ul.querySelectorAll('li')).map(li => li.textContent.split(' : ')[1].trim());
+if (existingEmails.includes(email)) {
+    const errorMessage = document.createElement('span');
+    errorMessage.classList.add('error');
+    errorMessage.textContent = "Email already exists";
+    msg.appendChild(errorMessage);
+
+    setTimeout(() => errorMessage.remove(), 3000);
+    return;
+}
+
+// If both username and email are unique, add the user to the list
+const li = document.createElement('li');
+li.textContent = `${username} : ${email}`;
+ul.appendChild(li);
+
+// Clear input fields
+inputName.value = '';
+inputEmail.value = '';
+}
+
+&lt/script&gt
+&lt/bodygt
+&lt/htmlgt
+        </code>
+    </pre>
+
+    <script>
+        const msg = document.querySelector('.msg');
+        const inputName = document.getElementById('name');
+        const inputEmail= document.getElementById('email');
+        const inputSubmit = document.getElementById('submit');
+        const ul = document.querySelector('.list-items');
+        const users = document.querySelectorAll('.users');
+        inputSubmit.addEventListener('click', onSubmit);
+
+        function onSubmit(e) {
+            e.preventDefault();
+
+            const username = inputName.value.trim();
+            const email = inputEmail.value.trim();
+
+            // Check if the username and email are not empty
+            if (username === "" || email === "") {
+                const errorMessage = document.createElement('span');
+                errorMessage.classList.add('error');
+                errorMessage.textContent = "Please enter all fields";
+                msg.appendChild(errorMessage);
+
+                setTimeout(() => errorMessage.remove(), 3000);
+                return;
+            }
+
+                // Check if the username is unique
+                const existingUsernames = Array.from(ul.querySelectorAll('li')).map(li => li.textContent.split(' : ')[0].trim());
+                if (existingUsernames.includes(username)) {
+                    const errorMessage = document.createElement('span');
+                    errorMessage.classList.add('error');
+                    errorMessage.textContent = "Username already exists";
+                    msg.appendChild(errorMessage);
+
+                    setTimeout(() => errorMessage.remove(), 3000);
+                    return;
+                }
+
+                // Check if the email is unique
+                const existingEmails = Array.from(ul.querySelectorAll('li')).map(li => li.textContent.split(' : ')[1].trim());
+                if (existingEmails.includes(email)) {
+                    const errorMessage = document.createElement('span');
+                    errorMessage.classList.add('error');
+                    errorMessage.textContent = "Email already exists";
+                    msg.appendChild(errorMessage);
+
+                    setTimeout(() => errorMessage.remove(), 3000);
+                    return;
+                }
+
+                // If both username and email are unique, add the user to the list
+                const li = document.createElement('li');
+                li.textContent = `${username} : ${email}`;
+                ul.appendChild(li);
+
+                // Clear input fields
+                inputName.value = '';
+                inputEmail.value = '';
+        }
+
+    </script>
+</body>
+</html>

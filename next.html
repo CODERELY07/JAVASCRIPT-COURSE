@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY JAVASCRIPT JOURNEY</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>MY JAVASCRIPT JOURNEY</h1>
+    <h2>Part 2</h2>
+    <div>
+        <h2>Foreach,Map,Filter</h2>
+        <p>This is the Array of object we will use to loop</p>
+        <pre>
+            const todo = [
+            {
+                id: 1,
+                text: 'Be Creative',
+                isComplete: true
+            },
+            {
+                id: 2,
+                text: 'Be Disciplined',
+                isComplete: true
+            },
+            {
+                id: 3,
+                text: 'Be Consistent',
+                isComplete: true
+            }
+        ];
+        </pre>
+        <h2>ForEach</h2>
+        <p>forEach:
+            forEach is a method used to iterate over elements of an array in JavaScript.
+            It executes a provided function once for each array element.
+            The function receives three arguments: the current element, the index of the current element, and the array itself.
+            forEach does not return a new array but is often used for its side effects, such as updating elements or performing actions for each element in the array.</p>
+        <p class="input">Example: <br><br>
+            Input: <br><br>
+            todo.forEach(function(todos){ <br>
+                document.getElementById('forEach'). innerHTML += todos.text + "&lt;br&gt;";
+            })
+          
+            <p id="forEach" class="output">
+            Output: <br><br>
+            </p>
+        </p>
+        <h2>Map</h2>
+        <p>map is a method used to create a new array by applying a function to each element of an existing array.
+            It returns a new array with the results of calling the provided function on every element in the array.
+            The function provided to map can perform transformations on elements or extract specific data from them.</p>
+        <p class="input">Example: <br><br>
+            Input: <br><br>
+            const todoText = todo.map(function(todos){ <br>
+                return todos.text; <br>
+            });<br>
+            document.getElementById('map').innerHTML += todoText;
+          
+            <p id="map" class="output">
+            Output: <br><br>
+            </p>
+        </p>
+        <h2>Filter</h2>
+        <p>filter is a method used to create a new array with all elements that pass a test specified by a provided function.
+            It iterates over each element in the array and includes the element in the new array if the provided function returns true.
+            filter does not modify the original array; it returns a new array containing only the elements that meet the specified condition.</p>
+
+        <p class="input">Example: <br><br>
+
+            const todoCompleted = todo.filter(function(todos){ <br>
+                return todos.isComplete === true; <br>
+            }).map(function(todos){ <br>
+                return todos.text; <br>
+            }); <br>
+            document.getElementById('filter').innerHTML += todoCompleted.join('<br>');
+          
+            <p id="filter" class="output">
+            Output: <br><br>
+            </p>
+        </p>
+    </div>
+    <br><br>
+    <br>
+    
+    <div>
+        <h2>Short Arrow Function Return</h2>
+        <p>A short arrow function return refers to a concise way of writing a function in JavaScript using the arrow function syntax (=>). In JavaScript, arrow functions provide a more compact syntax compared to traditional function expressions, especially for simple functions. </p>
+        <p class="input">Example: <br><br>
+            Input: <br><br>
+
+        const addNums = (num = 2, num2 = 3) => num + num2;<br>
+
+        document.getElementById('arrowfunction').innerHTML+= addNums(2,5);
+          
+            <p id="arrowfunction" class="output">
+            Output: <br><br>
+            </p>
+        </p>
+    </div>
+    <div>
+        <h2>OOP/Constructor Function</h2>
+        <p class="input">Example: <br><br>
+          
+          
+            <p id="object" class="output">
+          
+            </p>
+        </p>
+    </div>
+    <button style="float: left;padding: 9px 20px;margin: 30px;"><a href="index.html">Previous</a></button>
+    <button style="float: right;padding: 9px 20px;margin: 30px;"><a href="next2.html">Next</a></button>
+
+    <script>
+        const todo = [
+            {
+                id: 1,
+                text: 'Be Creative',
+                isComplete: true
+            },
+            {
+                id: 2,
+                text: 'Be Disciplined',
+                isComplete: true
+            },
+            {
+                id: 3,
+                text: 'Be Consistent',
+                isComplete: false
+            }
+        ];
+        
+        //for each
+        todo.forEach(function(todos){
+            document.getElementById('forEach').innerHTML += todos.text + "<br>";
+        });
+
+        //map
+        const todoText = todo.map(function(todos){
+            return todos.text;
+        });
+        document.getElementById('map').innerHTML += todoText;
+
+        //filter
+        const todoCompleted = todo.filter(function(todos){
+            return todos.isComplete === true;
+        }).map(function(todos){
+            return todos.text;
+        });
+        document.getElementById('filter').innerHTML += todoCompleted.join('<br>');
+
+        //arrow function return
+        const addNums = (num = 2, num2 = 3) => num + num2;
+
+        document.getElementById('arrowfunction').innerHTML+= addNums(2,5);
+
+        //constructor Function
+
+
+    </script>
+</body>
+</html>

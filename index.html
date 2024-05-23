@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY JAVASCRIPT JOURNEY</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>MY JAVASCRIPT JOURNEY</h1>
+    
+    <div>
+        <h2>From String to Array</h2>
+        <p>We can make a string into an array using the split() method</p>
+        <p class="input">Example: <br><br>
+            Input: <br><br>
+            const s = 'technology, computers, it, code';<br>
+            let arr = s.split(', ');<br>
+            console.log(arr);<br>
+            arr.forEach(function(txt, index) {<br>
+                document.getElementById('split').innerHTML += `[${index}] ${txt} <br>`;<br>
+            });<br>
+          
+            <p id="split" class="output">
+            Output: <br><br>
+            </p>
+        </p>
+    </div>
+    <br><br>
+    <div>
+        <h2>Object Destructuring</h2>
+        <p>Object destructuring is a feature in JavaScript that allows you to extract multiple properties from an object and assign them to variables in a more concise way.</p>
+        <p class="input">Example: <br><br>
+            Input: <br><br>
+            //object destructuring<br>
+            const student = { <br>
+                firstName: 'Mark', <br>
+                lastName: 'Perez',<br>
+                age:20,<br>
+                hobbies: ['Music', 'Instrument', 'Coding'],<br>
+                address: {<br>
+                    street: 'Sanlay Street',<br>
+                    city: 'Nabua',<br>
+                }<br>
+            }<br>
+            const {firstName, hobbies, lastName} = student;<br><br>
+            document.getElementById('object').innerHTML += `<br>Name: ${firstName} ${lastName} <br> Hobby: ${hobbies[0]}<br>`;<br>
+          
+            <p id="object" class="output">
+            Output: <br><br>
+            </p>
+        </p>
+    </div>
+    <div>
+        <h2>Array Of Object</h2>
+        <p>Arrays of objects are commonly used in programming for organizing and managing structured data. For example, you might use an array of objects to represent a list of plans of users, where each student object contains properties like id, text, and isCompleted. This allows you to work with the data in a cohesive and organized manner, performing operations such as adding, removing, or modifying individual user records as needed.</p>
+        <p class="input">Example: <br><br>
+            Input: <br><br>
+            //Array of Object<br>
+            const plan = [<br>
+                {<br>
+                    id: 1,<br>
+                    text: 'Be Creative',<br>
+                    isComplete: true<br>
+                },<br>
+                {<br>
+                    id: 2,<br>
+                    text: 'Be Disciplined',<br>
+                    isComplete: true<br>
+                },<br>
+                {<br>
+                    id: 3,<br>
+                    text: 'Be Consistent',<br>
+                    isComplete: true<br>
+                }<br>
+            ];<br>
+            plan.forEach(function(arr) {<br>
+                document.getElementById('array').innerHTML += `<br>\tId: ${arr.id}<br>\tText: ${arr.text}<br>\tisComplete: ${arr.isComplete}<br><br>`;<br>
+            });<br>
+          
+            <p id="array" class="output">
+            Output: <br><br>
+            </p>
+        </p>
+
+        <h3>JSON.stringify</h3>
+        <p id="json">     
+        This code snippet converts a JavaScript object, 'plan', into a JSON string using the 'JSON.stringify()' method. The resulting JSON string is then assigned to an HTML element with the id 'json', updating its inner HTML content to display the JSON representation of the 'plan' object. This process is commonly used to serialize JavaScript objects into a format that can be easily transmitted or stored, such as when sending data to a server or saving it locally.<br><br>
+        <p class="input">Input:<br>
+        const planJSON = JSON.stringify(plan);<br>
+        document.getElementById('json').innerHTML += "<br>Example Output: <br>" + planJSON ;<br>
+        </p>
+
+        </p>
+    </div>
+    <div>
+        <h2>For Loop</h2>
+        <p class="input">Example: <br><br>
+            The array of this is like in the prevoius example the plan variable
+            Input: <br><br>
+            
+            for(let plans of plan){ <br>
+                console.log(plans.text); <br>
+            } <br>
+          
+            <p id="object" class="output">
+            Output: <br> 
+            Be Creative <br>
+            Be Disciplined <br>
+            Be Consistent <br><br>
+            </p>
+        </p>
+    </div>
+    <button style="float: right;padding: 9px 20px;margin: 30px;"><a href="next.html">Next</a></button>
+    <script>
+        //split
+        const s = 'technology, computers, it, code';
+        let arr = s.split(', ');
+        console.log(arr);
+        arr.forEach(function(txt,index) {
+            document.getElementById('split').innerHTML += `[${index}] ${txt} <br>`;
+        });
+        
+        //object destructuring
+        const student = {
+            firstName: 'Mark',
+            lastName: 'Perez',
+            age: 20,
+            hobbies: ['Music', 'Instrument', 'Coding'],
+            address: {
+                street: 'Sanlay Street',
+                city: 'Nabua',
+            }
+        }
+        const {firstName, hobbies, lastName} = student;
+        document.getElementById('object').innerHTML += `Name: ${firstName} ${lastName} <br> Hobby: ${hobbies[0]}<br>`;
+
+        //Array of Object
+        const plan = [
+            {
+                id: 1,
+                text: 'Be Creative',
+                isComplete: true
+            },
+            {
+                id: 2,
+                text: 'Be Disciplined',
+                isComplete: true
+            },
+            {
+                id: 3,
+                text: 'Be Consistent',
+                isComplete: true
+            }
+        ];
+         
+        plan.forEach(function(arr) {
+            document.getElementById('array').innerHTML += `<br>\tId: ${arr.id}<br>\tText: ${arr.text}<br>\tisComplete: ${arr.isComplete}<br><br>`;
+        });
+        
+        const planJSON = JSON.stringify(plan);
+        document.getElementById('json').innerHTML += "<br>Example Output: <br>" + planJSON ;
+
+        //for loop
+        for(let plans of plan){
+            console.log(plans.text);
+        }
+    </script>
+</body>
+</html>

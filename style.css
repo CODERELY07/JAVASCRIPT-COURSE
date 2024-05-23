@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.input, .output {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.input {
+    background-color: rgb(154, 200, 241);
+}
+
+.output {
+    background-color: rgb(53, 52, 52);
+    color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+    .input, .output {
+        padding: 5px;
+        font-size: 0.8em;
+    }
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+button{
+    background-color: #fff;
+    cursor: pointer;
+}
